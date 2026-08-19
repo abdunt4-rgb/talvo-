@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply bg-surface-light text-slate-900 dark:bg-surface-dark dark:text-slate-100;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+  [dir='rtl'] body {
+    font-family: theme('fontFamily.arabic');
+  }
+  [dir='ltr'] body {
+    font-family: theme('fontFamily.sans');
+  }
+}
